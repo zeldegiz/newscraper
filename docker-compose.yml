@@ -1,0 +1,19 @@
+version: '3.9'
+services:
+    db:
+        image: postgres:15.1-alpine
+        restart: always
+        environment:
+            - POSTGRES_USER=postgres
+            - POSTGRES_PASSWORD=postgres
+        ports:
+            - '5432:5432'
+        volumes:
+            - db_backup:/var/lib/postgresql/data
+    scraper:
+        build: .
+        restart: always
+volumes:
+    db_backup:
+        name: 'db_backup'
+    

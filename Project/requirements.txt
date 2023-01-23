@@ -1,0 +1,5 @@
+urllib3==1.26.8
+beautifulsoup4==4.11.1
+sqlalchemy==1.4.46
+lxml==4.9.2
+psycopg2-binary

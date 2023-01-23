@@ -1,0 +1,2 @@
+import newscraper
+newscraper.start()
